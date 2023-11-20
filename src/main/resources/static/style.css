@@ -1,0 +1,65 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Segoe UI", serif;
+    height: 100%;
+}
+
+#container {
+    position: relative;
+    background: white url("img.png");
+    display: block;
+    padding: 0;
+    flex: 1;
+    margin: 0;
+}
+
+.param {
+    border-left: 1px solid gray;
+    margin: 0 8px;
+    padding: 4px 8px;
+}
+
+label {
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.params, .config {
+    display: flex;
+    align-items: center;
+}
+
+.config {
+    position: relative;
+    padding: 8px 16px;
+    box-shadow: 0 -4px 16px .1px rgba(0, 0, 0, .3);
+}
+
+
+#editor {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.shape button {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.shape {
+    border-radius: 2px;
+    transition: .1s;
+}
+
+.shape:hover {
+    background: rgba(255, 0, 0, .1);
+    transition: .1s;
+}
+
+.shape:hover button {
+    visibility: visible;
+}

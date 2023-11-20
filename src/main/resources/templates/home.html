@@ -1,0 +1,40 @@
+<html lang="fr">
+<head>
+    <title>2D Creator</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="editor">
+    <div id="container" onmousedown="press(event)" onmouseup="drop(event)" onmousemove="drag(event)"></div>
+    <div class="config">
+        <label for="shapeform">Shape form </label>
+        <select id="shapeform" onchange="s=parseInt(event.target.value)">
+            <option value="0" selected>Circle</option>
+            <option value="1">Square</option>
+            <option value="2">Ellipsis</option>
+            <option value="3">Triangle</option>
+            <option value="4">Hexagon</option>
+            <option value="5">Diamond</option>
+        </select>
+        <div class="params">
+            <div class="param">
+                <label for="bg-color">Background Color</label>
+                <input type="color" id="bg-color" name="bg-color" value="#00ff00" placeholder="background color"
+                       onchange="bgcolor=event.target.value">
+            </div>
+            <div class="param">
+                <label for="strokecolor">Border Color</label>
+                <input type="color" id="strokecolor" name="stroke-color" placeholder="strokecolor" value="#ff0000"
+                       onchange="strokecolor=event.target.value">
+            </div>
+            <div class="param">
+                <label for="strokewidth">Stroke Width</label>
+                <input type="number" id="strokewidth" name="strokewidth" placeholder="strokewidth" value="1"
+                       onchange="strokewidth=event.target.value">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
